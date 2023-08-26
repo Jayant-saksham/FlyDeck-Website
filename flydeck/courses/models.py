@@ -2,6 +2,15 @@ from django.db import models
 from django.conf import settings
 from django.utils.text import slugify
 
+
+class Video(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    url = models.URLField()
+    
+    def __str__(self):
+        return self.title 
+
 class CourseCategory(models.Model):
     name = models.CharField(max_length=100)
     about = models.TextField()
@@ -28,7 +37,6 @@ class Course(models.Model):
         ('fr', 'French'),
         ('de', 'German'),
         ('jp', 'Japanese'),
-        # Add more choices as needed
     )
 
     name = models.CharField(max_length=100)
@@ -36,7 +44,7 @@ class Course(models.Model):
     instructor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
     # course_image = models.ImageField(upload_to='course_images/', blank=True, null=True)
-    # videos = models.ManyToManyField(Video, related_name='courses')
+    videos = models.ManyToManyField(Video, related_name='courses')
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES)
     slug = models.SlugField(unique=True, blank=True, null=True)
 
