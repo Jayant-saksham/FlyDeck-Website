@@ -1,6 +1,6 @@
 
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}<title>Trainers - FlyDeck</title>{% endblock title %}
 
 {% block content %}
@@ -10,7 +10,8 @@
   <div class="breadcrumbs">
     <div class="container">
       <h2>Trainers</h2>
-      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      <p>Meet our coding enthusiasts!  These skilled individuals are here to guide you through the art of coding. With their expertise, you'll uncover the secrets of creating websites, games, and apps. Every code you learn under their guidance will open doors to exciting possibilities. Join us in a tranquil journey into the world of coding, where learning becomes a serene and enriching experience. 
+      </p>
     </div>
   </div><!-- End Breadcrumbs -->
 
@@ -21,12 +22,14 @@
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="member">
-            <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+            <!-- Add the image at the top -->
+            <img src="{% static 'assets/img/trainers/trainer-1.jpg' %}" class="img-fluid" alt="Top Image">
+        
             <div class="member-content">
-              <h4>Walter White</h4>
-              <span>Web Development</span>
+              <h4>Sarah Jhinson</h4>
+              <span>Marketing</span>
               <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
               </p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
@@ -37,10 +40,13 @@
             </div>
           </div>
         </div>
+        
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="member">
-            <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+            <!-- Add the image at the top -->
+            <img src="{% static 'assets/img/trainers/trainer-2.jpg' %}" class="img-fluid" alt="Top Image">
+        
             <div class="member-content">
               <h4>Sarah Jhinson</h4>
               <span>Marketing</span>
@@ -59,12 +65,14 @@
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="member">
-            <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+            <!-- Add the image at the top -->
+            <img src="{% static 'assets/img/trainers/trainer-3.jpg' %}" class="img-fluid" alt="Top Image">
+        
             <div class="member-content">
-              <h4>William Anderson</h4>
-              <span>Content</span>
+              <h4>Sarah Jhinson</h4>
+              <span>Marketing</span>
               <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
               </p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
