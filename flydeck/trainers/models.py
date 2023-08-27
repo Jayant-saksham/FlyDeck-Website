@@ -5,7 +5,7 @@ from django.db import models
 class Trainer(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField()
-    photo = models.ImageField(upload_to='trainers/')
+    # photo = models.ImageField(upload_to='trainers/')
     expertise = models.CharField(max_length=100)
     social_media = models.URLField(blank=True)
 

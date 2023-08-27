@@ -25,7 +25,9 @@ class CourseCategory(models.Model):
 
     def __str__(self):
         return self.name
-
+    
+    class Meta:
+        verbose_name = 'Course Categorie'
 
 
 class Course(models.Model):
@@ -56,6 +58,6 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
-    
+ 
 
 
