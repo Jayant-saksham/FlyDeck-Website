@@ -4,7 +4,6 @@ from django.conf import settings
 from django.utils.text import slugify
 
 
-
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
