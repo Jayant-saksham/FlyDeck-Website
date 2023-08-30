@@ -1,15 +1,16 @@
 from pathlib import Path
+from dotenv import load_dotenv
 import os
+
+load_dotenv() 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
-SECRET_KEY = 'django-insecure-!q#*hh#6yblwr40yt5@22lz-&zw=j9w$^zajn$2pmj0+od-8by'
-
-DEBUG = True
+DEBUG = True 
 
 ALLOWED_HOSTS = []
-
 
 
 INSTALLED_APPS = [
@@ -94,13 +95,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.User'
 
-GOOGLE_CLIENT_ID = '1086537728371-aee39horbm403ia7ba8bqune6edlrc50.apps.googleusercontent.com'
-GOOGLE_CLIENT_SECRET = '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'
+GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET")
 
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]

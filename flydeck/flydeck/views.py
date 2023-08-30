@@ -1,4 +1,3 @@
-# views.py
 from django.shortcuts import HttpResponse, render
 from django.views import View
 # from google.oauth2 import id_token

@@ -63,6 +63,7 @@ class StudentProfile(models.Model):
     phone_number = models.CharField(max_length=20, blank=True)
     birth_year = models.PositiveIntegerField(choices=BIRTH_YEAR_CHOICES, null=True, blank=True)
     slug = models.SlugField(unique=True, blank=True, null=True)
+    is_active = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
